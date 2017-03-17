@@ -1,0 +1,59 @@
+lerna(verbose) GitUtilities.isInitialized    ()
+lerna(verbose) GitUtilities.isInitialized    () => true
+lerna(verbose) GitUtilities.getTopLevelDirectory()
+lerna(verbose) GitUtilities.getTopLevelDirectory() => "."
+lerna(verbose) FileSystemUtilities.existsSync("./lerna.json")
+lerna(verbose) FileSystemUtilities.existsSync("./lerna.json") => true
+lerna(verbose) FileSystemUtilities.readFileSync("./lerna.json")
+lerna(verbose) FileSystemUtilities.readFileSync("./lerna.json") => "{\n  \"lerna\": \"2.0.0-beta.38\",\n  \"packages\": [\n    \"packages/*\"\n  ],\n  \"version\": \"0.0.1\"\n}"
+lerna(verbose) FileSystemUtilities.existsSync("./package.json")
+lerna(verbose) FileSystemUtilities.existsSync("./package.json") => true
+lerna(verbose) FileSystemUtilities.readFileSync("./package.json")
+lerna(verbose) FileSystemUtilities.readFileSync("./package.json") => "{\n  \"name\": \"lerna-demo\",\n  \"version\": \"1.0.0\",\n  \"description\": \"\",\n  \"main\": \"index.js\",\n  \"scripts\": {\n    \"test\": \"echo \\\"Error: no test specified\\\" && exit 1\",\n    \"lerna\": \"lerna\"\n  },\n  \"author\": \"\",\n  \"license\": \"ISC\",\n  \"devDependencies\": {\n    \"lerna\": \"2.0.0-beta.38\"\n  }\n}"
+lerna(info)    Lerna v2.0.0-beta.38
+lerna(verbose) FileSystemUtilities.existsSync("./package.json")
+lerna(verbose) FileSystemUtilities.existsSync("./package.json") => true
+lerna(verbose) FileSystemUtilities.existsSync("./lerna.json")
+lerna(verbose) FileSystemUtilities.existsSync("./lerna.json") => true
+lerna(verbose) FileSystemUtilities.existsSync("./VERSION")
+lerna(verbose) FileSystemUtilities.existsSync("./VERSION") => false
+lerna(verbose) FileSystemUtilities.existsSync("./packages/a/package.json")
+lerna(verbose) FileSystemUtilities.existsSync("./packages/a/package.json") => true
+lerna(verbose) FileSystemUtilities.existsSync("./packages/b/package.json")
+lerna(verbose) FileSystemUtilities.existsSync("./packages/b/package.json") => true
+lerna(verbose) FileSystemUtilities.existsSync("./packages/c/package.json")
+lerna(verbose) FileSystemUtilities.existsSync("./packages/c/package.json") => true
+lerna(verbose) Attempting running PublishCommand.initialize
+lerna(verbose) GitUtilities.getCurrentBranchDescription()
+lerna(verbose) GitUtilities.getCurrentBranchDescription() => "master"
+lerna(info)    Current version: 0.0.1
+lerna(info)    Checking for updated packages...
+lerna(verbose) GitUtilities.hasTags          ()
+lerna(verbose) GitUtilities.hasTags          () => true
+lerna(verbose) GitUtilities.getLastTag       ()
+lerna(verbose) GitUtilities.getLastTag       () => "v0.0.1"
+lerna(info)    Comparing with: v0.0.1
+lerna(verbose) GitUtilities.getLastTaggedCommitInBranch()
+lerna(verbose) GitUtilities.getLastTag       ()
+lerna(verbose) GitUtilities.getLastTag       () => "v0.0.1"
+lerna(verbose) GitUtilities.getLastTaggedCommitInBranch() => "458d3ad30c55e3f1d26a60a6446a6b0894c88542"
+lerna(verbose) GitUtilities.describeTag      ("458d3ad30c55e3f1d26a60a6446a6b0894c88542")
+lerna(verbose) GitUtilities.describeTag      ("458d3ad30c55e3f1d26a60a6446a6b0894c88542") => "v0.0.1"
+lerna(verbose) GitUtilities.diffSinceIn      ("v0.0.1", "./packages/a")
+lerna(verbose) GitUtilities.diffSinceIn      ("v0.0.1", "./packages/a") => ""
+lerna(verbose) GitUtilities.diffSinceIn      ("v0.0.1", "./packages/b")
+lerna(verbose) GitUtilities.diffSinceIn      ("v0.0.1", "./packages/b") => ""
+lerna(verbose) GitUtilities.diffSinceIn      ("v0.0.1", "./packages/c")
+lerna(verbose) GitUtilities.diffSinceIn      ("v0.0.1", "./packages/c") => ""
+lerna(error)   Errored while running PublishCommand.initialize
+    Error: No updated packages to publish.
+        at PublishCommand.initialize (/Users/florianorpeliere/.nvm/versions/node/v6.9.5/lib/node_modules/lerna/lib/commands/PublishCommand.js:115:18)
+        at PublishCommand._attempt (/Users/florianorpeliere/.nvm/versions/node/v6.9.5/lib/node_modules/lerna/lib/Command.js:215:21)
+        at PublishCommand.runCommand (/Users/florianorpeliere/.nvm/versions/node/v6.9.5/lib/node_modules/lerna/lib/Command.js:199:12)
+        at PublishCommand.run (/Users/florianorpeliere/.nvm/versions/node/v6.9.5/lib/node_modules/lerna/lib/Command.js:110:12)
+        at Object.<anonymous> (/Users/florianorpeliere/.nvm/versions/node/v6.9.5/lib/node_modules/lerna/bin/lerna.js:72:11)
+        at Module._compile (module.js:570:32)
+        at Object.Module._extensions..js (module.js:579:10)
+        at Module.load (module.js:487:32)
+        at tryModuleLoad (module.js:446:12)
+        at Function.Module._load (module.js:438:3)
