@@ -1,0 +1,15 @@
+{
+  "name": "@mylib/b",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Run test of package b\""
+  },
+  "devDependencies": {
+    "@mylib/a": "^0.0.1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
